@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #0f1117;
+  --bg-card: rgba(255, 255, 255, 0.06);
+  --border-soft: rgba(255, 255, 255, 0.12);
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #7c7cff;
+  --accent-hover: #6a6afc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1a1c2b, #0f1117);
+  color: var(--text-main);
+  font-family: Inter, system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--accent), #d6d6eb);
+  color: rgb(212, 124, 124);
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--accent-hover), #4f4fff);
+}
+
+.input-dark {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  color: var(--text-main);
+}
+
+.input-dark:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
