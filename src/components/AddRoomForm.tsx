@@ -88,7 +88,30 @@ export function AddRoomForm({ onRoomAdded }: AddRoomFormProps) {
           />
         </div>
 
-        
+        <div className="space-y-2">
+          <label className="flex items-center space-x-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={hasAC}
+              onChange={(e) => setHasAC(e.target.checked)}
+              className="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+              disabled={loading}
+            />
+            <span className="text-sm font-medium text-gray-700">Has Air Conditioning</span>
+          </label>
+
+          <label className="flex items-center space-x-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={hasAttachedWashroom}
+              onChange={(e) => setHasAttachedWashroom(e.target.checked)}
+              className="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+              disabled={loading}
+            />
+            <span className="text-sm font-medium text-gray-700">Has Attached Washroom</span>
+          </label>
+        </div>
+
         <button
           type="submit"
           disabled={loading}
