@@ -1,33 +1,4 @@
-/*
-  # Create Rooms Table for Hostel Allocation System
 
-  ## Overview
-  This migration creates the core rooms table for the Smart Hostel Room Allocation System.
-  
-  ## New Tables
-  
-  ### `rooms`
-  Stores information about hostel rooms including:
-  - `id` (uuid, primary key) - Unique identifier for each room
-  - `room_no` (text, unique) - Room number (e.g., "101", "A-205")
-  - `capacity` (integer) - Maximum number of students the room can accommodate
-  - `has_ac` (boolean) - Whether the room has air conditioning
-  - `has_attached_washroom` (boolean) - Whether the room has an attached washroom
-  - `is_allocated` (boolean) - Whether the room is currently allocated
-  - `created_at` (timestamptz) - Timestamp when the room was added
-  
-  ## Security
-  
-  ### Row Level Security (RLS)
-  - RLS is enabled on the rooms table
-  - Public read access is allowed (anyone can view rooms)
-  - Public write access is allowed for this demo (in production, this should be restricted)
-  
-  ## Notes
-  - All boolean fields default to false for safety
-  - Room numbers must be unique to prevent duplicates
-  - Capacity must be at least 1
-*/
 
 -- Create the rooms table
 CREATE TABLE IF NOT EXISTS rooms (
